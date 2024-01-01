@@ -2,7 +2,7 @@ import { DownloadCloudIcon, Maximize } from 'lucide-react';
 import React from 'react';
 // import { MockupPhone } from '../common/mockup-phone';
 import Image from 'next/image';
-import happy_music from '@/assets/illustrations/happy_music.svg';
+
 import dua_lipa from '@/assets/illustrations/dua_lipa.svg';
 
 export const CTA = () => {
@@ -13,13 +13,6 @@ export const CTA = () => {
         <div className='flex flex-col items-center gap-5'>
           <p className='text-balance max-w-3xl text-center relative text-xl md:text-2xl font-light text-zinc-400'>
             Welcome to
-            <Image
-              alt=''
-              height={50}
-              width={50}
-              src={happy_music}
-              className='absolute left-40 -top-24 h-24 w-24'
-            />
             <strong className='text-4xl text-violet-400 font-bold text-edge-outline '>
               {' '}
               audilane.

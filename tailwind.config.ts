@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+        display:'var(--font-display)'
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -67,10 +70,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "float": {
+          '0%, 100%': { transform: 'translatey(0px)' },
+          '50%': { transform: 'translatey(-10px)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 1600ms ease-in-out infinite",
       },
     },
   },
