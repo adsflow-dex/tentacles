@@ -6,13 +6,15 @@ import { CTA } from '@/components/blocks';
 import { Footer } from '../blocks/footer';
 import { Features } from '../blocks/features';
 import Header from '../blocks/header';
+import { Feat } from '../blocks/feat';
 
 export const Landing = () => {
   return (
-    <main className='relative w-screen h-screen overflow-y-scroll'>
+    <main className='relative w-screen h-screen overflow-y-scroll scroll-smooth'>
       <Header/>
       <Hero/>
-      {/* <Particles quantity={1000} className='absolute inset-0 -z-0 h-full w-full top-0'/> */}
+      {/* <Features/> */}
+      <Feat/>
     </main>
   );
 };

@@ -2,14 +2,13 @@ import React from 'react';
 
 export const Features = () => {
   return (
-    <section className='h-full'>
-      <div className='py-8 px-4 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6'>
-        <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-violet-300'>
-          Designed for business teams like yours
-        </h2>
-        <p className='text-gray-500 sm:text-xl dark:text-gray-400 lg:px-48'>
-          Here we focus on markets where technology, innovation, and capital can
-          unlock long-term value and drive economic growth.
+    <section id='features' className='h-full'>
+      <div className='py-8 px-4 mx-auto max-w-screen-xl text-start pt-52 pb-24 lg:px-6'>
+        <h1 className='text-[7vw] md:text-6xl xl:text-7xl text-left text-balance font-bold text-foreground mb-6 '>
+          Features
+        </h1>
+        <p className='text-gray-500 sm:text-xl dark:text-gray-400'>
+          Unlock a World of Advertising Possibilities with Adsflow.
         </p>
         <div className='mt-8 lg:mt-16 mb-8 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0'>
           <div>

@@ -57,10 +57,10 @@ export const Hero = () => {
         <Image src={business} alt='' className='animate-float delay-150' />
       </div>
       <div className='absolute duration-300 right-20 md:right-56 bottom-8 md:bottom-24 opacity-70 z-0 w-32 md:w-36 pt-10 pb-6 rounded-lg ease-in-out '>
-        <Image src={chart} alt='' className='animate-float delay-200' />
+        <Image src={chart} alt='' className='animate-float delay-100' />
       </div>
       <div className='absolute duration-300 left-8 md:left-32 bottom-20 md:bottom-36 opacity-70 z-0 w-36 md:w-48 pt-10 pb-6 rounded-lg ease-in-out '>
-        <Image src={vault} alt='' className='animate-float delay-100' />
+        <Image src={vault} alt='' className='animate-float delay-200' />
       </div>
     </section>
   );
