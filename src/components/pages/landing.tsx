@@ -15,6 +15,7 @@ export const Landing = () => {
       <Hero/>
       <Features/>
       {/* <Feat/> */}
+      <Footer/>
     </main>
   );
 };
