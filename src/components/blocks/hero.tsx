@@ -16,6 +16,7 @@ export const Hero = () => {
         <Image
           src={background}
           alt=''
+          unoptimized
           className='h-full w-full brightness-50 object-cover opacity-75'
         />
       </div>
