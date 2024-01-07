@@ -11,14 +11,7 @@ export const CTA = () => {
     <section
       id='call-to-action'
       className='h-fit w-full py-24 relative'>
-      <div className='absolute h-full w-full top-0 left-0 animate-title'>
-        <Image
-          src={bg}
-          alt=''
-          unoptimized
-          className='h-full w-full object-cover rotate-180 -z-0'
-        />
-      </div>
+     
       <div className='w-full max-w-screen-xl px-5 mx-auto flex justify-center items-center gap-12 flex-wrap animate-fade-in z-20 isolate'>
         <div className='flex flex-col items-center gap-6'>
           <p className='text-pretty md:text-balance max-w-3xl text-center relative text-2xl md:text-3xl text-foreground'>

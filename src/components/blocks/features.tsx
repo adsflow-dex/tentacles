@@ -2,13 +2,13 @@ import React from 'react';
 
 export const Features = () => {
   return (
-    <section id='features' className='h-full'>
+    <section id='features' className='h-full z-20 isolate'>
       <div className='py-8 px-4 mx-auto max-w-screen-xl text-start pt-52 pb-24 lg:px-6'>
-        <h1 className='text-[7vw] md:text-4xl text-left text-balance font-bold text-foreground mb-6 '>
-          Features
+        <h1 className='text-[7vw] md:text-4xl text-left text-balance font-semibold text-foreground mb-2 '>
+          Unveiling AdsFlow&apos;s Diverse Orchestra
         </h1>
         <p className='text-gray-500 sm:text-xl dark:text-gray-400'>
-          Unlock a World of Advertising Possibilities with Adsflow.
+          Tailoring Solutions for Every Note
         </p>
         <div className='mt-8 lg:mt-16 mb-8 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0'>
           <div>

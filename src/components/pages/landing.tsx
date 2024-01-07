@@ -14,6 +14,8 @@ import {
   AiOutlineEnvironment,
   AiOutlineDollar,
 } from 'react-icons/ai';
+import Image from 'next/image';
+import bg from '@/assets/illustrations/bg.png';
 
 export const Landing = () => {
   return (
@@ -44,8 +46,18 @@ export const Landing = () => {
           </div>
         </div>
       </div>
-      <CTA />
-      <Features />
+      <div className='relative w-full '>
+        <div className='absolute h-full w-full top-0 left-0 animate-title'>
+          <Image
+            src={bg}
+            alt=''
+            unoptimized
+            className='h-full w-full object-cover -z-0'
+          />
+        </div>
+        <CTA />
+        <Features />
+      </div>
       {/* <Feat/> */}
       <Footer />
     </main>
