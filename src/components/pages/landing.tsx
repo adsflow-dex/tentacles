@@ -10,11 +10,11 @@ import { Feat } from '../blocks/feat';
 
 export const Landing = () => {
   return (
-    <main className='relative w-screen h-screen overflow-y-scroll scroll-smooth'>
+    <main className='relative w-screen h-screen overflow-y-scroll scroll-smooth '>
       <Header/>
       <Hero/>
-      {/* <Features/> */}
-      <Feat/>
+      <Features/>
+      {/* <Feat/> */}
     </main>
   );
 };

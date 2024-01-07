@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' suppressHydrationWarning={true}>
-      <body className={`${font.className} ${display.variable}`}>
+      <body className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'

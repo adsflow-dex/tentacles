@@ -4,7 +4,7 @@ export const Features = () => {
   return (
     <section id='features' className='h-full'>
       <div className='py-8 px-4 mx-auto max-w-screen-xl text-start pt-52 pb-24 lg:px-6'>
-        <h1 className='text-[7vw] md:text-6xl xl:text-7xl text-left text-balance font-bold text-foreground mb-6 '>
+        <h1 className='text-[7vw] md:text-4xl text-left text-balance font-bold text-foreground mb-6 '>
           Features
         </h1>
         <p className='text-gray-500 sm:text-xl dark:text-gray-400'>
