@@ -20,52 +20,72 @@ export const Roadmap = () => {
         <p className='text-muted-foreground sm:text-xl text-center lg:pr-6'>
           Tailoring Solutions for Every Note
         </p>
-        <div className='py-12 h-full w-full flex flex-col items-center scale-90 md:scale-100'>
+        <div className='py-12 h-full w-full flex flex-col items-start md:items-center translate-x-16 sm:translate-x-24 md:translate-x-0'>
           <div className='h-fit w-0.5  bg-muted-foreground/50 py-4 font-extrabold'>
-            <div className='h-32 w-32 relative border border-muted-foreground -translate-x-1/2 rounded-full grid place-items-center'>
+            <div className='h-32 w-32 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center'>
               <p className='z-10 isolate text-3xl'>2023</p>
-              <div className='absolute w-44 border-t border-muted-foreground z-0 rotate-[-22.5deg]'>
-                <div className='absolute w-32 md:w-48 -left-0 bottom-3 rotate-[22.5deg] text-end -translate-x-full pr-2'>
-                  <p className=''> Q3-Q4</p>
-                  <p className='font-light text-sm leading-none'>
-                    Define tokenomics parameters (Sept-Nov)
-                  </p>
-                </div>
-                <div className='absolute w-32 md:w-48 -right-0 translate-x-full -top-3 rotate-[22.5deg] pl-2'>
+              <div className='absolute w-24 translate-x-12 md:-translate-x-12 border-t border-muted-foreground/50 z-0 origin-left md:origin-right rotate-[-22.5deg] md:rotate-[22.5deg]'>
+                <div className='absolute w-48 -right-0 md:-left-0 translate-x-full md:-translate-x-full -top-6 md:top-6 origin-left text-start md:text-end rotate-[22.5deg] md:rotate-[-22.5deg] pr-2'>
                   <p className=''> Q4</p>
-                  <p className='font-light text-sm'>Token Website Design</p>
+                  <p className='font-light'>Inception and Project Kickoff</p>
                 </div>
               </div>
             </div>
-            <div className='h-44 w-44 md:h-52 md:w-52 relative border border-muted-foreground -translate-x-1/2 rounded-full grid place-items-center -mt-6 -mb-6'>
-              <p className='z-10 isolate text-4xl text-center leading-none w-24'>
-                2023 2024
+            <div className='h-44 w-44 md:h-52 md:w-52 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center -mt-6 -mb-6'>
+              <p className='z-10 isolate text-4xl text-center leading-tight w-24'>
+                2024
               </p>
-
-              <div className='absolute w-52 md:w-64 border-t border-muted-foreground z-0'>
+              <div className='absolute w-52 md:w-64 border-t border-muted-foreground/50 z-0'>
                 <div className='absolute w-[7.5rem] md:w-48 -left-0 -top-6 text-end -translate-x-full pr-2'>
-                  <p className=''> Q3/23 - Q1/24</p>
-                  <p className='font-light text-sm leading-none'>
-                  Smart contract development (Dec-June)
+                  <p className=''> Q1 - Q2</p>
+                  <p className='font-light leading-tight'>
+                    Foundational Setup and Preliminary Actions
                   </p>
                 </div>
                 <div className='absolute -right-0 translate-x-full -top-6 pl-2'>
-                  <p className=''> Q4</p>
-                  <p className='font-light text-sm'>Token Website Design</p>
+                  <p className=''>Q2 - Q3</p>
+                  <p className='font-light'>Beta Launch and Market Entry</p>
                 </div>
               </div>
             </div>
-            <div className='h-28 w-28 relative border border-muted-foreground -translate-x-1/2 rounded-full grid place-items-center'>
+            <div className='h-28 w-28 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center'>
               <p className='z-10 isolate text-2xl'>2024</p>
-              <div className='absolute w-48 border-t border-muted-foreground z-0'></div>
+              <div className='absolute w-16 translate-x-12 border-t border-muted-foreground/50 z-0'>
+                <div className='absolute w-56 text-pretty -right-0 -top-6 text-start translate-x-full pl-2'>
+                  <p className=''> Q3 - Q4</p>
+                  <p className='font-light leading-tight'>
+                    Developer Empowerment and Community Engagement
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className='h-36 w-36 relative border border-muted-foreground -translate-x-1/2 rounded-full grid place-items-center -mt-2 -mb-2'>
+            <div className='h-36 w-36 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center -mt-2 -mb-2'>
               <p className='z-10 isolate text-3xl'>2025</p>
-              <div className='absolute w-56 border-t border-muted-foreground z-0'></div>
+              <div className='absolute w-56 border-t border-muted-foreground/50 z-0'>
+                <div className='absolute w-48 text-balance -left-0 -top-6 text-end -translate-x-full pr-2'>
+                  <p className=''> Q1 - Q2</p>
+                  <p className='font-light leading-tight'>
+                    Developer Tools Rollout and Community Synergy
+                  </p>
+                </div>
+                <div className='absolute -right-0 translate-x-full -top-6 pl-2'>
+                  <p className=''>Q2 - Q3</p>
+                  <p className='font-light'>
+                    Mainnet Deployment and Audilane Revelation
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className='h-28 w-28 relative border border-muted-foreground -translate-x-1/2 rounded-full grid place-items-center'>
+            <div className='h-28 w-28 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center'>
               <p className='z-10 isolate text-2xl'>2024</p>
-              <div className='absolute w-48 border-t border-muted-foreground z-0 rotate-[22.5deg]'></div>
+              <div className='absolute w-24 translate-x-12 border-t border-muted-foreground/50 z-0 origin-left rotate-[22.5deg]'>
+                <div className='absolute w-48 -right-0 translate-x-full -bottom-6 origin-left rotate-[-22.5deg] pl-2'>
+                  <p className=''> Q4</p>
+                  <p className='font-light'>
+                    Operational Expansion and Innovative Ventures
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
