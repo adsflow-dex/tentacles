@@ -24,25 +24,26 @@ export const Features = () => {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className='col-span-3 p-6 rounded-xl hover:bg-muted/50 ease-in-out duration-200 flex gap-4'>
+                className='col-span-6 lg:col-span-3 p-6 rounded-xl hover:bg-muted/50 ease-in-out duration-200 flex gap-4'>
                 <div className='space-y-4'>
                   <h3
-                    className={cn('text-2xl border-l-2 pl-3 ', feature.color)}>
+                    className={cn('text-2xl border-l-2 pl-3 mt-4', feature.color)}>
                     {feature.title}
                   </h3>
-                  <p className='text-muted-foreground font-light tracking-wide leading-relaxed clear-right'>
-                    {feature.desc}
-                  </p>
-                </div>
-
-                <div className='h-full w-24 flex items-center'>
-                  {typeof feature.icon === 'function' ? (
-                    <feature.icon
-                      className={cn('h-24 w-24 fill-white float-right')}
-                    />
-                  ) : (
-                    feature.icon
-                  )}
+                  <div className=' flex items-center'>
+                    <p className='text-muted-foreground font-light tracking-wide leading-relaxed clear-right'>
+                      {feature.desc}
+                    </p>
+                    <div className='w-24'>
+                      {typeof feature.icon === 'function' ? (
+                        <feature.icon
+                          className={cn('h-24 w-24 fill-white float-right')}
+                        />
+                      ) : (
+                        feature.icon
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

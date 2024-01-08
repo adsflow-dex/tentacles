@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content, Marketing, Offices, Presentation } from '@/assets';
+import { Content, Growth, Marketing, Offices, Presentation } from '@/assets';
 
 interface IFeatureItems {
   title: string;
@@ -36,6 +36,7 @@ export const features:IFeatureItems[] = [
     {
         title:"Industry Innovators & Early Adopters",
         color:"border-violet-400",
-        desc:"Are you the visionary leading the charge towards a brighter advertising future? Embrace the cutting-edge power of blockchain with AdsFlow and be at the forefront of revolutionizing transparency and efficiency. Rewrite the rules, pave the way for a more ethical and impactful advertising ecosystem."
+        desc:"Are you the visionary leading the charge towards a brighter advertising future? Embrace the cutting-edge power of blockchain with AdsFlow and be at the forefront of revolutionizing transparency and efficiency. Rewrite the rules, pave the way for a more ethical and impactful advertising ecosystem.",
+        icon:Growth
     },
 ]
