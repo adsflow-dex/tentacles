@@ -20,10 +20,8 @@ export const Hero = () => {
             <Image src={launch} alt='rocket' className='h-48 w-48 object-cover' />
           </div>
           <div className=''>
-            <h1 className='text-[7vw] md:text-6xl xl:text-7xl text-center text-balance font-semibold text-foreground z-10 isolate overflow-hidden leading-loose'>
+            <h1 className='text-[7vw] md:text-6xl xl:text-7xl text-center text-balance font-semibold text-foreground z-10 isolate overflow-hidden'>
               Transparent Advertising
-            </h1>
-            <h1 className='text-[7vw] md:text-6xl xl:text-7xl text-center text-balance font-semibold text-foreground z-10 isolate overflow-hidden leading-loose'>
               on the Blockchain.
             </h1>
           </div>

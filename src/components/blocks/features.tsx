@@ -13,7 +13,7 @@ export const Features = () => {
           Tailoring Solutions for Every Note
         </p>
         <div className='py-6 w-full'>
-          <div className="w-full flex justify-end lg:pr-6">
+          <div className="w-full flex justify-center lg:justify-end lg:pr-6">
           <p className='text-muted-foreground max-w-2xl text-center lg:text-right text-pretty'>
             AdsFlow transcends a one-size-fits-all approach, recognizing the
             dynamic symphony of players within the advertising ecosystem. It

@@ -1,12 +1,8 @@
 import React from 'react';
-import { Hero } from '@/components/blocks';
-import { Navbar } from '@/components/blocks';
-import Particles from '../common/particles';
+import { Hero, Roadmap } from '@/components/blocks';
 import { CTA } from '@/components/blocks';
 import { Footer } from '../blocks/footer';
 import { Features } from '../blocks/features';
-import Header from '../blocks/header';
-import { Feat } from '../blocks/feat';
 import {
   AiOutlineSafetyCertificate,
   AiOutlineGlobal,
@@ -20,7 +16,6 @@ import bg from '@/assets/illustrations/bg.png';
 export const Landing = () => {
   return (
     <main className='relative w-screen h-screen overflow-y-scroll scroll-smooth '>
-      {/* <Header /> */}
       <Hero />
       <div className='bg-background border-y'>
         <div className='max-w-screen-xl mx-auto w-full flex gap-4 flex-wrap justify-center z-10 p-5'>
@@ -58,8 +53,9 @@ export const Landing = () => {
         <CTA />
         <Features />
       </div>
+      <Roadmap/>
       {/* <Feat/> */}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
