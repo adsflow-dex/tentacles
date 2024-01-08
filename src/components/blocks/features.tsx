@@ -5,39 +5,40 @@ import { cn } from '@/lib/utils';
 export const Features = () => {
   return (
     <section id='features' className='h-full z-20 isolate'>
-      <div className='px-5 mx-auto max-w-screen-xl text-start  py-24 lg:px-6'>
-        <h1 className='text-[7vw] md:text-4xl text-left text-balance font-semibold text-foreground mb-2 '>
+      <div className='px-5 mx-auto max-w-screen-xl text-start py-24 lg:px-6'>
+        <h1 className='text-[7vw] md:text-4xl text-center lg:text-right text-balance font-semibold text-foreground mb-2 lg:pr-6'>
           Unveiling AdsFlow&apos;s Diverse Orchestra
         </h1>
-        <p className='text-gray-500 sm:text-xl dark:text-gray-400'>
+        <p className='text-muted-foreground sm:text-xl text-center lg:text-right lg:pr-6'>
           Tailoring Solutions for Every Note
         </p>
         <div className='py-6 w-full'>
-          <p className='text-muted-foreground max-w-2xl'>
+          <div className="w-full flex justify-end lg:pr-6">
+          <p className='text-muted-foreground max-w-2xl text-center lg:text-right text-pretty'>
             AdsFlow transcends a one-size-fits-all approach, recognizing the
             dynamic symphony of players within the advertising ecosystem. It
             meticulously tunes its solutions to resonate with the unique needs
             and aspirations of each participant, harmonizing their interests for
             a more transparent and impactful advertising future.
-          </p>
-          <div className='grid grid-cols-6 gap-20 py-12'>
+          </p></div>
+          <div className='flex pt-12 flex-wrap justify-center h-fit lg:translate-x-6'>
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className='col-span-6 lg:col-span-3 p-6 rounded-xl hover:bg-muted/50 ease-in-out duration-200 flex gap-4'>
-                <div className='space-y-4'>
+                className='flex-grow flex-shrink h-full w-full lg:basis-1/2 lg:pr-12 pb-6 lg:pb-12  max-w-2xl'>
+                <div className='h-full space-y-6 p-6 rounded-xl bg-muted/25 hover:bg-muted/50 ease-in-out duration-200 '>
                   <h3
                     className={cn('text-2xl border-l-2 pl-3 mt-4', feature.color)}>
                     {feature.title}
                   </h3>
-                  <div className=' flex items-center'>
-                    <p className='text-muted-foreground font-light tracking-wide leading-relaxed clear-right'>
+                  <div className='flex lg:items-center flex-col-reverse lg:flex-row gap-4'>
+                    <p className='text-muted-foreground font-light tracking-wide leading-relaxed line-clamp-6 text-balance'>
                       {feature.desc}
                     </p>
                     <div className='w-24'>
                       {typeof feature.icon === 'function' ? (
                         <feature.icon
-                          className={cn('h-24 w-24 fill-white float-right')}
+                          className={cn('h-24 w-24 fill-white')}
                         />
                       ) : (
                         feature.icon
