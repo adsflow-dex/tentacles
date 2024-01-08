@@ -20,10 +20,10 @@ import bg from '@/assets/illustrations/bg.png';
 export const Landing = () => {
   return (
     <main className='relative w-screen h-screen overflow-y-scroll scroll-smooth '>
-      <Header />
+      {/* <Header /> */}
       <Hero />
-      <div className='bg-background border-y animate-title'>
-        <div className='max-w-screen-xl mx-auto w-full flex gap-4 flex-wrap justify-center z-10 p-5 animate-fade-in'>
+      <div className='bg-background border-y'>
+        <div className='max-w-screen-xl mx-auto w-full flex gap-4 flex-wrap justify-center z-10 p-5'>
           <div className='flex gap-2 items-center text-white'>
             <AiOutlineSafetyCertificate />
             Data Encryption
@@ -47,12 +47,12 @@ export const Landing = () => {
         </div>
       </div>
       <div className='relative w-full '>
-        <div className='absolute h-full w-full top-0 left-0 animate-title'>
+        <div className='absolute w-full top-0 left-0'>
           <Image
             src={bg}
             alt=''
             unoptimized
-            className='h-full w-full object-cover -z-0'
+            className='h-full w-full object-cover object-left -z-0'
           />
         </div>
         <CTA />

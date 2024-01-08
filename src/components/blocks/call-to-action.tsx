@@ -12,7 +12,7 @@ export const CTA = () => {
       id='call-to-action'
       className='h-fit w-full py-24 relative'>
      
-      <div className='w-full max-w-screen-xl px-5 mx-auto flex justify-center items-center gap-12 flex-wrap animate-fade-in z-20 isolate'>
+      <div className='w-full max-w-screen-xl px-5 mx-auto flex justify-center items-center gap-12 flex-wrap z-20 isolate'>
         <div className='flex flex-col items-center gap-6'>
           <p className='text-pretty md:text-balance max-w-3xl text-center relative text-2xl md:text-3xl text-foreground'>
             AdsFlow isn&apos;t just another technology solution; it&apos;s a

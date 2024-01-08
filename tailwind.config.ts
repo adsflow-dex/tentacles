@@ -117,22 +117,17 @@ const config = {
 					"0%": {
 						"line-height": "0%",
 						opacity: "0",
-
 					},
 					"25%": {
 						"line-height": "0%",
 						opacity: "0%",
-
 					},
 					"80%": {
 						opacity: "80%",
-
 					},
-
 					"100%": {
-						"line-height": "100%",
+						"line-height": "125%",
 						opacity: "100%",
-
 					},
 				},
       },
