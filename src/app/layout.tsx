@@ -3,6 +3,7 @@ import { Open_Sans, Raleway } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
 import Header from '@/components/blocks/header';
+import Script from 'next/script';
 
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
@@ -27,10 +28,24 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <Header />
-
           {children}
         </ThemeProvider>
       </body>
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy='lazyOnload' id='google-analytics'>
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+            });
+        `}
+      </Script>
     </html>
   );
 }
