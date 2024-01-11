@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { ThemeToggle } from '../common/theme-toggle';
 
-export default function Header() {
+export function Header() {
   return (
     <header className='fixed top-0 w-full text-muted-foreground z-50 backdrop-blur-sm'>
       <div className='max-w-screen-xl mx-auto flex justify-between items-center p-5'>

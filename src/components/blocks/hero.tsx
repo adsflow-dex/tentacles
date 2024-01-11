@@ -11,6 +11,7 @@ export const Hero = () => {
           src={background}
           alt=''
           unoptimized
+          priority
           className='h-full w-full brightness-50 object-cover opacity-75'
         />
       </div>
@@ -32,8 +33,8 @@ export const Hero = () => {
           <div className='flex gap-3 justify-center flex-wrap text-center'>
             <a
               className='w-full justify-center sm:w-fit flex items-center tracking-wider py-4 rounded-full uppercase text-white transition duration-500 ease-in-out transform bg-gradient  hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline'
-              href='/'>
-              Get Notified
+              href='/presale'>
+              Join Presale
             </a>
             <a
               className='w-full justify-center sm:w-fit flex items-center tracking-wider bg-muted/50 py-4 rounded-full uppercase text-white border border-white transition duration-500 ease-in-out transform hover:bg-white hover:text-black hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline'

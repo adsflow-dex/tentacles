@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Open_Sans, Raleway } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
-import Header from '@/components/blocks/header';
+import { Header } from '@/components';
 import Script from 'next/script';
 
 const font = Open_Sans({ subsets: ['latin'] });
@@ -27,7 +27,7 @@ export default function RootLayout({
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          <Header />
+          {/* <Header /> */}
           {children}
         </ThemeProvider>
       </body>
