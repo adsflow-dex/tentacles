@@ -42,7 +42,7 @@ export default function RootLayout({
                 />
                 <meta
                     property="og:image"
-                    content="https://adsflow.s3.amazonaws.com/logo.png"
+                    content="https://adsflow.s3.amazonaws.com/af_og.png"
                 />
 
                 {/* <!-- Twitter Meta Tags --> */}
@@ -59,7 +59,7 @@ export default function RootLayout({
                 />
                 <meta
                     name="twitter:image"
-                    content="https://adsflow.s3.amazonaws.com/logo.png"
+                    content="https://adsflow.s3.amazonaws.com/af_og.png"
                 />
 
                 {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
