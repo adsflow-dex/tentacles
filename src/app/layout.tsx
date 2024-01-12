@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 import { Open_Sans, Raleway } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
@@ -9,35 +9,54 @@ const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
-  title: 'AdsFlow',
-  description: 'Your new favourite Advertisement solution',
+    title: 'AdsFlow',
+    description: 'Your new favourite Advertisement solution',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang='en' suppressHydrationWarning={true}>
-      <body
-        className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange>
-          <Header />
-          {children}
-        </ThemeProvider>
-      </body>
-      <Script
-        strategy='lazyOnload'
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+    return (
+        <html lang="en" suppressHydrationWarning={true}>
+            <head>
+                <Script
+                    type="text/javascript"
+                    strategy="beforeInteractive"
+                    id="hs-script-loader"
+                    src="https://js.hsforms.net/forms/embed/v2.js"
+                ></Script>
+            </head>
+            <body
+                className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}
+            >
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Header />
+                    {children}
 
-      <Script strategy='lazyOnload' id='google-analytics'>
-        {`
+                    {/* <Script id="hubspot-newsletter" strategy="lazyOnload">
+                        {`  hbspt.forms.create({
+                        region: "na1",
+                        portalId: "44910036",
+                        formId: "0af17081-c55e-4d64-8839-2446cfcca715"
+                    });
+                    `}
+                    </Script> */}
+                </ThemeProvider>
+            </body>
+            <Script
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            />
+
+            <Script strategy="lazyOnload" id="google-analytics">
+                {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -45,7 +64,7 @@ export default function RootLayout({
             page_path: window.location.pathname,
             });
         `}
-      </Script>
-    </html>
-  );
+            </Script>
+        </html>
+    );
 }
