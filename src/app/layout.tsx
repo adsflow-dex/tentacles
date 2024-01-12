@@ -22,30 +22,47 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <head>
+                {/* <!-- HTML Meta Tags --> */}
+                <title>Transparent Advertising on the Blockchain.</title>
+                <meta
+                    name="description"
+                    content="Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments."
+                />
+
+                {/* <!-- Facebook Meta Tags --> */}
+                <meta property="og:url" content="https://adsflow.net/" />
+                <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
                     content="Transparent Advertising on the Blockchain."
                 />
                 <meta
                     property="og:description"
-                    content="Prioritize creator earnings via fair revenue sharing,
-                        diverse ad formats, and secure blockchain payments."
+                    content="Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments."
                 />
                 <meta
                     property="og:image"
                     content="https://adsflow.s3.amazonaws.com/logo.png"
                 />
-                <meta property="og:url" content="https://adsflow.net/" />
 
+                {/* <!-- Twitter Meta Tags --> */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="adsflow.net" />
+                <meta property="twitter:url" content="https://adsflow.net/" />
                 <meta
-                    name="twitter:card"
-                    content="Prioritize creator earnings via fair revenue sharing,
-                    diverse ad formats, and secure blockchain payments."
+                    name="twitter:title"
+                    content="Transparent Advertising on the Blockchain."
+                />
+                <meta
+                    name="twitter:description"
+                    content="Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments."
                 />
                 <meta
                     name="twitter:image"
                     content="https://adsflow.s3.amazonaws.com/logo.png"
                 />
+
+                {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
                 <Script
                     type="text/javascript"
                     strategy="beforeInteractive"
