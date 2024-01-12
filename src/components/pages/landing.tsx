@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, Roadmap } from '@/components/blocks';
+import { Faq, Hero, Roadmap } from '@/components/blocks';
 import { CTA } from '@/components/blocks';
 import { Footer } from '../blocks/footer';
 import { Features } from '../blocks/features';
@@ -54,6 +54,7 @@ export const Landing = () => {
                 <Features />
             </div>
             <Roadmap />
+            {/* <Faq /> */}
             {/* <Feat/> */}
         </main>
     );

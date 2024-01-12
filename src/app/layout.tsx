@@ -22,6 +22,30 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning={true}>
             <head>
+                <meta
+                    property="og:title"
+                    content="Transparent Advertising on the Blockchain."
+                />
+                <meta
+                    property="og:description"
+                    content="Prioritize creator earnings via fair revenue sharing,
+                        diverse ad formats, and secure blockchain payments."
+                />
+                <meta
+                    property="og:image"
+                    content="https://adsflow.s3.amazonaws.com/logo.png"
+                />
+                <meta property="og:url" content="https://adsflow.net/" />
+
+                <meta
+                    name="twitter:card"
+                    content="Prioritize creator earnings via fair revenue sharing,
+                    diverse ad formats, and secure blockchain payments."
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://adsflow.s3.amazonaws.com/logo.png"
+                />
                 <Script
                     type="text/javascript"
                     strategy="beforeInteractive"

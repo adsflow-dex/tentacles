@@ -7,3 +7,4 @@ export * from './hero';
 export * from './navbar';
 export * from './roadmap';
 export * from './sidebar';
+export * from './faq';
