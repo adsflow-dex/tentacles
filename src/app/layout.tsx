@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
 import Header from '@/components/blocks/header';
 import Script from 'next/script';
+import { Footer } from '@/components';
 
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
@@ -48,6 +49,7 @@ export default function RootLayout({
                     });
                     `}
                     </Script> */}
+                    <Footer />
                 </ThemeProvider>
             </body>
             <Script

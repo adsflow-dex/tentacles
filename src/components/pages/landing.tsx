@@ -15,9 +15,8 @@ import bg from '@/assets/illustrations/bg.png';
 
 export const Landing = () => {
     return (
-        <main className="relative w-screen h-screen overflow-y-scroll scroll-smooth ">
+        <main className="relative  ">
             <Hero />
-
             <div className="bg-background border-y">
                 <div className="max-w-screen-xl mx-auto w-full flex gap-4 flex-wrap justify-center z-10 p-5">
                     <div className="flex gap-2 items-center text-white">
@@ -56,7 +55,6 @@ export const Landing = () => {
             </div>
             <Roadmap />
             {/* <Feat/> */}
-            {/* <Footer /> */}
         </main>
     );
 };
