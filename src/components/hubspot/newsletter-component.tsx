@@ -14,7 +14,12 @@ function NewsletterComponent() {
         }
     }, []);
 
-    return <div id="hubspotForm" className="w-1/2 !bg-black mx-auto"></div>;
+    return (
+        <div
+            id="hubspotForm"
+            className="w-4/5 md:w-1/2 !bg-black mx-auto"
+        ></div>
+    );
 }
 
 export { NewsletterComponent };
