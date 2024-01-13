@@ -1,3 +1,4 @@
+export * from './coin';
 export * from './content';
 export * from './growth';
 export * from './logo';
