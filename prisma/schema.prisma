@@ -14,3 +14,13 @@ model Newsletter {
   id     String @id @default(auto()) @map("_id") @db.ObjectId
   email  String
 }
+
+model Contact{
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+    firstName String    
+    lastName String
+    email String
+    company String?
+    project String?
+    message String?
+}
