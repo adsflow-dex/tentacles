@@ -23,8 +23,9 @@ export async function Newsletter() {
                     ref.current?.reset();
                     const res = await addNewsLetter(formData);
                     if (res?.error) {
-                        alert(res.error);
+                        return alert(res.error);
                     }
+                    return alert('Subscribed');
                 }}
                 className="h-12 rounded-full border flex items-center overflow-hidden "
             >
