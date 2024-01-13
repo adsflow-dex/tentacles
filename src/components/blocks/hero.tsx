@@ -3,6 +3,7 @@ import Image from 'next/image';
 import background from '@/assets/illustrations/pxfuel.jpg';
 import launch from '@/assets/illustrations/launch.png';
 import Link from 'next/link';
+import { GetNotified } from '.';
 
 export const Hero = () => {
     return (
@@ -34,12 +35,8 @@ export const Hero = () => {
                         diverse ad formats, and secure blockchain payments.
                     </h2>
                     <div className="flex gap-3 justify-center flex-wrap text-center">
-                        <Link
-                            className="w-full justify-center sm:w-fit flex items-center tracking-wider py-4 rounded-full uppercase text-white transition duration-500 ease-in-out transform bg-gradient  hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline"
-                            href="/newsletter"
-                        >
-                            Get Notified
-                        </Link>
+                        <GetNotified />
+
                         <a
                             className="w-full justify-center sm:w-fit flex items-center tracking-wider bg-muted/50 py-4 rounded-full uppercase text-white border border-white transition duration-500 ease-in-out transform hover:bg-white hover:text-black hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline"
                             href="/"
