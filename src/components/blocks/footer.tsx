@@ -12,11 +12,11 @@ export const Footer = () => {
         },
         {
             name: 'about',
-            link: '/',
+            link: '/lightpaper',
         },
         {
             name: 'contact us',
-            link: '/',
+            link: '/contact',
         },
     ];
     return (

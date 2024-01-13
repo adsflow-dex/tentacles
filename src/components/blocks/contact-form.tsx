@@ -77,7 +77,10 @@ export function ContactForm() {
         <div>
             <form
                 ref={ref}
-                action={formAction}
+                action={async (formData: FormData) => {
+                    ref.current?.reset();
+                    await formAction(formData);
+                }}
                 className="grid grid-cols-2 gap-8"
             >
                 {fields.map((i) => (
@@ -97,6 +100,11 @@ export function ContactForm() {
                 ))}
                 <div className="col-span-1"></div>
                 <FormButton />
+                {state.status === true && (
+                    <p className="text-green-500 text-right col-span-2">
+                        Submitted!
+                    </p>
+                )}
             </form>
         </div>
     );

@@ -1,3 +1,4 @@
+'use server';
 import { prisma } from '@/db';
 
 export const createContact = async (prev: any, formData: FormData) => {
@@ -19,10 +20,9 @@ export const createContact = async (prev: any, formData: FormData) => {
             status: false,
             message: 'fields are required',
         };
-
     try {
         //check if email already exists
-        const findEmail = await prisma.newsletter.findMany({
+        const findEmail = await prisma.contact.findMany({
             where: {
                 email: email,
             },
