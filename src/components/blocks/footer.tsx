@@ -2,7 +2,7 @@ import { Logo } from '@/assets/jsx/logo';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Newsletter } from '.';
+import { Newsletter } from './newsletter';
 
 export const Footer = () => {
     const company = [
@@ -12,11 +12,11 @@ export const Footer = () => {
         },
         {
             name: 'about',
-            link: '/about',
+            link: '/',
         },
         {
             name: 'contact us',
-            link: '/newsletter',
+            link: '/',
         },
     ];
     return (
