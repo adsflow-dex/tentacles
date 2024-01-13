@@ -20,7 +20,7 @@ export const Footer = () => {
         },
     ];
     return (
-        <footer className="mx-auto max-w-screen-xl min-h-[400px] pt-20 pb-4 ">
+        <footer className="mx-auto max-w-screen-xl min-h-[300px] pt-20 pb-4 ">
             <div className="grid  grid-cols-1  md:grid-cols-3 gap-12 md:gap-4 px-4 md:px-0">
                 <div>
                     <Link href="#" className="flex gap-2 items-end text-2xl">
@@ -68,7 +68,7 @@ export const Footer = () => {
                     <h6 className="text-xl font-semibold text-white">
                         Company
                     </h6>
-                    <ul className="mt-5 grid gap-3 ">
+                    <ul className="my-5 grid gap-3 ">
                         {company.map((i) => (
                             <li
                                 key={i.link}
@@ -80,21 +80,22 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="">
-                    <h6 className="text-xl font-semibold text-white">
+                    <Newsletter />
+                    <h6 className="text-xl font-semibold text-white mt-6">
                         Resources
                     </h6>
 
                     <a
                         href="https://adsflow.s3.amazonaws.com/AdsFlow_Lightpaper_V1.pdf"
                         target="_blank"
-                        className="mt-4 w-full sm:w-fit bg-gradient whitespace-nowrap overflow-hidden hover:-translate-y-1 ease-in-out duration-300 text-violet-200 px-8 py-4 text-xl justify-center items-center flex gap-2 leading-none rounded-full"
+                        className="text-gray-400 hover:text-white cursor-pointer capitalize my-5"
+                        // className="mt-4 w-full sm:w-fit bg-gradient whitespace-nowrap overflow-hidden hover:-translate-y-1 ease-in-out duration-300 text-violet-200 px-8 py-4 text-xl justify-center items-center flex gap-2 leading-none rounded-full"
                     >
                         Lightpaper
                     </a>
-                    <Newsletter />
                 </div>
-                <div className="col-span-1 md:col-span-3 mt-40">
-                    <h6 className="text-gray-500 text-center border-t pt-4 tracking-wider">
+                <div className="col-span-1 md:col-span-3 mt-32">
+                    <h6 className="text-gray-500 text-center border-t pt-4 tracking-wider text-sm">
                         Copyright © 2024 AdsFlow
                     </h6>
                 </div>
