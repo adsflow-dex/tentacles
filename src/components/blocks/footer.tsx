@@ -2,6 +2,7 @@ import { Logo } from '@/assets/jsx/logo';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Newsletter } from '.';
 
 export const Footer = () => {
     const company = [
@@ -90,6 +91,7 @@ export const Footer = () => {
                     >
                         Lightpaper
                     </a>
+                    <Newsletter />
                 </div>
                 <div className="col-span-1 md:col-span-3 mt-40">
                     <h6 className="text-gray-500 text-center border-t pt-4 tracking-wider">
