@@ -53,6 +53,7 @@ export const Landing = () => {
                 <CTA />
                 <Features />
             </div>
+
             <Roadmap />
             {/* <Faq /> */}
             {/* <Feat/> */}

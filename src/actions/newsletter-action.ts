@@ -2,6 +2,10 @@
 
 import { prisma } from '@/db';
 import nodemailer from 'nodemailer';
+import handleBars from 'handlebars';
+import { promises as fs } from 'fs';
+import path from 'path';
+
 const transporter = nodemailer.createTransport({
     host: 'smtp-relay.brevo.com',
     port: 587,
@@ -13,11 +17,23 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendMail = async (receiverMail: string) => {
+    const doc = await fs.readFile(
+        path.resolve(
+            process.cwd(),
+            'src',
+            'templates',
+            'newsletter-template',
+            'index.hbs'
+        ),
+        'utf8'
+    );
+    const template = handleBars.compile(doc.toString()) as any;
+
     await transporter.sendMail({
-        from: '"Adsflow" adsflownet@gmail.com', // sender address
+        from: '"Adsflow" <adsflownet@gmail.com>', // sender address
         to: receiverMail,
-        subject: 'Thankyou for subscribing', // Subject line
-        text: 'Thankyou for subscribing',
+        subject: 'Thank you for subscribing', // Subject line
+        html: template(),
     });
 };
 
@@ -43,6 +59,7 @@ export const addNewsLetter = async (prevState: any, formData: FormData) => {
             return { email, status: true, message: 'Thankyou for subscribing' };
         }
     } catch (error) {
+        console.log('🚀 ~ addNewsLetter ~ error:', error);
         return { email, status: false };
     }
 };
