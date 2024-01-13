@@ -65,7 +65,7 @@ export const Coin = (props: ISVGProps) => {
           height='89.4148'
           filterUnits='userSpaceOnUse'
           colorInterpolationFilters='sRGB'>
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feColorMatrix
             in='SourceAlpha'
             type='matrix'
@@ -98,10 +98,10 @@ export const Coin = (props: ISVGProps) => {
           x2='168.775'
           y2='136.449'
           gradientUnits='userSpaceOnUse'>
-          <stop stop-color='#D944FE' />
-          <stop offset='0.436714' stop-color='#6AD2D8' />
-          <stop offset='0.735' stop-color='#6E55F0' />
-          <stop offset='1' stop-color='#5E0CC6' />
+          <stop stopColor='#D944FE' />
+          <stop offset='0.436714' stopColor='#6AD2D8' />
+          <stop offset='0.735' stopColor='#6E55F0' />
+          <stop offset='1' stopColor='#5E0CC6' />
         </linearGradient>
       </defs>
     </svg>
