@@ -31,27 +31,30 @@ const FormButton = () => {
 const initialState: {
     email: string;
     status: boolean;
+    message: string;
 } = {
     email: '',
     status: false,
+    message: '',
 };
 
 export function Newsletter() {
     const ref = useRef<HTMLFormElement>(null);
     const [state, formAction] = useFormState(addNewsLetter, initialState);
     const [openModal, setOpenModal] = useState(false);
+    console.log('🚀 ~ Newsletter ~ state:', state);
 
     useEffect(() => {
-        let timeout: ReturnType<typeof setTimeout>;
+        // let timeout: ReturnType<typeof setTimeout>;
         if (state.status === true) {
             setOpenModal(true);
-            timeout = setTimeout(() => {
-                setOpenModal(false);
-            }, 3000);
+            // timeout = setTimeout(() => {
+            //     setOpenModal(false);
+            // }, 3000);
         }
-        return () => {
-            clearTimeout(timeout);
-        };
+        // return () => {
+        //     clearTimeout(timeout);
+        // };
     }, [state]);
 
     return (
@@ -73,13 +76,22 @@ export function Newsletter() {
                 <AlertDialogContent>
                     <AlertDialogHeader>
                         <AlertDialogTitle>
-                            Thank you For Subscribing AdsFlow
+                            {state.message === 'Thankyou for subscribing'
+                                ? 'Thankyou for subscribing'
+                                : 'You Had Already Subscribed To Our Newsletter'}
                         </AlertDialogTitle>
                         <AlertDialogDescription>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Hic ex magnam ea?
                         </AlertDialogDescription>
                     </AlertDialogHeader>
+                    <AlertDialogAction
+                        onClick={() => {
+                            setOpenModal(false);
+                        }}
+                    >
+                        Continue
+                    </AlertDialogAction>
                 </AlertDialogContent>
             </AlertDialog>
         </div>

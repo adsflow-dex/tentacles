@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
     secure: false,
     auth: {
         user: 'adsflownet@gmail.com',
-        pass: 'xsmtpsib-f6ead1e28cd67fa573586fcf96d6dc3b4ce468ce659ee305b630102e5696bbd7-gnKhPyAGFkIBLrJZ',
+        pass: '7WOghyRI0kjpcZM5',
     },
 });
 
@@ -32,7 +32,7 @@ export const addNewsLetter = async (prevState: any, formData: FormData) => {
             },
         });
         if (findEmail.length) {
-            await sendMail(email);
+            return { email, status: true, message: 'Email already exists' };
         } else {
             const newNewsletter = await prisma.newsletter.create({
                 data: {
@@ -40,8 +40,8 @@ export const addNewsLetter = async (prevState: any, formData: FormData) => {
                 },
             });
             await sendMail(email);
+            return { email, status: true, message: 'Thankyou for subscribing' };
         }
-        return { email, status: true };
     } catch (error) {
         return { email, status: false };
     }
