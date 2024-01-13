@@ -17,13 +17,14 @@ import { useEffect, useRef, useState } from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 import { prisma } from '@/db';
 import { revalidatePath } from 'next/cache';
+import Image from 'next/image';
 const FormButton = () => {
     const { pending, data } = useFormStatus();
 
     return (
         <>
             <button className="border rounded-r-full px-4" type="submit">
-                {pending ? 'loading' : 'Subscribe'}
+                {pending ? '..Loading' : 'Subscribe'}
             </button>
         </>
     );
@@ -42,19 +43,11 @@ export function Newsletter() {
     const ref = useRef<HTMLFormElement>(null);
     const [state, formAction] = useFormState(addNewsLetter, initialState);
     const [openModal, setOpenModal] = useState(false);
-    console.log('🚀 ~ Newsletter ~ state:', state);
 
     useEffect(() => {
-        // let timeout: ReturnType<typeof setTimeout>;
         if (state.status === true) {
             setOpenModal(true);
-            // timeout = setTimeout(() => {
-            //     setOpenModal(false);
-            // }, 3000);
         }
-        // return () => {
-        //     clearTimeout(timeout);
-        // };
     }, [state]);
 
     return (
@@ -75,20 +68,31 @@ export function Newsletter() {
                 <AlertDialogTrigger></AlertDialogTrigger>
                 <AlertDialogContent>
                     <AlertDialogHeader>
-                        <AlertDialogTitle>
+                        <AlertDialogTitle className="text-center">
                             {state.message === 'Thankyou for subscribing'
                                 ? 'Thankyou for subscribing'
                                 : 'You Had Already Subscribed To Our Newsletter'}
                         </AlertDialogTitle>
-                        <AlertDialogDescription>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Hic ex magnam ea?
+                        <AlertDialogDescription className="py-6">
+                            <Image
+                                src="/mail.png"
+                                alt="mail"
+                                height={60}
+                                width={60}
+                                className="invert mx-auto "
+                            />
+                            <p className="text-center mt-2">
+                                {state.message === 'Thankyou for subscribing'
+                                    ? 'Thank you for subscribing to our newsletter! 🎉  You can expect to receive the latest updates, industry insights, and exclusive offers right in your inbox.                                    '
+                                    : 'Thank you for your continued subscription to our newsletter! 🎉 We appreciate your ongoing support.'}
+                            </p>
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogAction
                         onClick={() => {
                             setOpenModal(false);
                         }}
+                        className="rounded-full"
                     >
                         Continue
                     </AlertDialogAction>
