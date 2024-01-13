@@ -9,3 +9,4 @@ export * from './roadmap';
 export * from './sidebar';
 export * from './faq';
 export * from './get-notified';
+export * from './contact-form';

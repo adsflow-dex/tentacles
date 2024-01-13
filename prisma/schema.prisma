@@ -22,5 +22,5 @@ model Contact{
     email String
     company String?
     project String?
-    message String?
+    reason String?
 }
