@@ -1,17 +1,17 @@
 'use client';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
 import { addNewsLetter } from '@/actions/newsletter-action';
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
-import Image from 'next/image';
 const FormButton = () => {
     const { pending, data } = useFormStatus();
 

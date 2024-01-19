@@ -1,8 +1,7 @@
-import { ContactForm, Footer } from '@/components';
-import Header from '@/components/blocks/header';
-import Image from 'next/image';
-import React from 'react';
 import background from '@/assets/illustrations/planet.png';
+import { ContactForm, Footer } from '@/components';
+import { Header } from '@/components/blocks/header';
+import Image from 'next/image';
 
 function Contact() {
   return (
@@ -32,8 +31,10 @@ function Contact() {
             </a>
           </p>
         </div>
-        <div className='backdrop-blur-sm bg-black/30 rounded-xl p-5 grid gap-1 max-w-screen-md mx-auto'>
-          <h3 className="font-display text-xl font-semibold mb-4">Your Contact Information</h3>
+        <div className='backdrop-blur-sm sm:bg-black/30 rounded-xl sm:p-5 grid gap-1 max-w-screen-md mx-auto'>
+          <h3 className='font-display text-xl font-semibold mb-4'>
+            Your Contact Information
+          </h3>
           <ContactForm />
         </div>
       </div>

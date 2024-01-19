@@ -5,7 +5,7 @@ import background from '@/assets/illustrations/planet.png';
 export const Roadmap = () => {
     return (
         <section id='roadmap' className="h-fit w-full relative flex flex-col ">
-            <div className="absolute h-full w-full top-0 left-0 z-0">
+            <div className="absolute h-full w-full top-0 left-0 z-0 select-none">
                 <Image
                     src={background}
                     alt=""
@@ -20,7 +20,7 @@ export const Roadmap = () => {
                 <p className="text-muted-foreground sm:text-xl text-center lg:pr-6">
                     Tailoring Solutions for Every Note
                 </p>
-                <div className="py-12 h-full w-full flex flex-col items-start md:items-center translate-x-14 sm:translate-x-48 md:translate-x-0 ease-in-out duration-200">
+                <div className="py-12 h-full w-full flex flex-col items-start md:items-center translate-x-8 sm:translate-x-48 md:translate-x-0 ease-in-out duration-200">
                     <div className="h-fit w-0.5  bg-muted-foreground/50 py-4 font-extrabold text-sm md:text-base">
                         <div className="h-32 w-32 relative border border-muted-foreground/50 -translate-x-1/2 rounded-full grid place-items-center">
                             <p className="z-10 isolate text-3xl">2023</p>

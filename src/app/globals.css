@@ -24,6 +24,21 @@
     --border: 215 27.9% 16.9%;
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(67, 65, 65); 
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(11, 11, 11, 0.25); 
+  }
+  ::-webkit-scrollbar-thumb {    
+    background: rgb(67, 65, 65); 
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
   }
 }
  
@@ -49,16 +64,17 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-    .bg-background-image {
-      background-image: url('../assets/illustrations/pxfuel.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  .bg-background-image {
+    background-image: url('../assets/illustrations/pxfuel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
-    .bg-gradient {
-      background: linear-gradient(101.81deg,
-          #f087ff -4.52%,
-          #6e1fce 54.5%,
-          rgba(110, 31, 206, 0.2) 101.41%);
-    }
+  .bg-gradient {
+    background: linear-gradient(101.81deg,
+              #f087ff -4.52%,
+              #6e1fce 54.5%,
+              rgba(110, 31, 206, 0.2) 101.41%);
+  }
+  
 }

@@ -91,7 +91,7 @@ export function ContactForm() {
                         name={i.name}
                         placeholder={i.placeholder}
                         className={cn(
-                            'appearance-none h-16 w-full bg-input/25 placeholder:text-white/50 rounded-xl px-4 border border-white/25 focus:outline-none focus:bg-transparent focus:border-white/50',
+                            'appearance-none h-14 w-full bg-input/25 placeholder:text-white/50 rounded-xl px-4 border border-white/25 focus:outline-none focus:bg-transparent focus:border-white/50',
                             i.name === 'firstName' || i.name === 'lastName'
                                 ? 'md:col-span-1 col-span-2'
                                 : 'col-span-2'

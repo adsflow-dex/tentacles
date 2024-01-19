@@ -6,7 +6,7 @@ const LightPaper = () => {
     <div className='h-screen w-screen'>
       <iframe
         src='https://adsflow.s3.amazonaws.com/AdsFlow_Lightpaper_V1.pdf'
-        className='h-full max-w-screen-xl w-full mx-auto p-5'
+        className='h-full max-w-screen-xl w-full mx-auto md:p-5'
         title='AdsFlow Lightpaper'
       />
     </div>

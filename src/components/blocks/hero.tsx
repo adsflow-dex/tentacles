@@ -8,7 +8,7 @@ import { GetNotified } from '.';
 export const Hero = () => {
     return (
         <section className="h-fit w-full relative flex flex-col">
-            <div className="absolute h-full w-full top-0 left-0">
+            <div className="absolute h-full w-full top-0 left-0 select-none">
                 <Image
                     src={background}
                     alt=""

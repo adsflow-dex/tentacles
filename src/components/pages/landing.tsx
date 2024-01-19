@@ -1,22 +1,17 @@
-import React from 'react';
-import { Faq, Hero, Roadmap } from '@/components/blocks';
-import { CTA } from '@/components/blocks';
-import { Footer } from '../blocks/footer';
-import { Features } from '../blocks/features';
-import {
-    AiOutlineSafetyCertificate,
-    AiOutlineGlobal,
-    AiOutlineSecurityScan,
-    AiOutlineEnvironment,
-    AiOutlineDollar,
-} from 'react-icons/ai';
-import Image from 'next/image';
 import bg from '@/assets/illustrations/bg.png';
-import Header from '../blocks/header';
+import { CTA, Features, Footer, Header, Hero, Roadmap, Tokenomics } from '@/components';
+import Image from 'next/image';
+import {
+    AiOutlineDollar,
+    AiOutlineEnvironment,
+    AiOutlineGlobal,
+    AiOutlineSafetyCertificate,
+    AiOutlineSecurityScan,
+} from 'react-icons/ai';
 
 export const Landing = () => {
     return (
-      <main className='relative'>
+      <main className='relative overflow-hidden'>
         <Header />
         <Hero />
         <div className='bg-background border-y'>
@@ -44,7 +39,7 @@ export const Landing = () => {
           </div>
         </div>
         <div className='relative w-full '>
-          <div className='absolute w-full top-0 left-0'>
+          <div className='absolute w-full top-0 left-0 select-none'>
             <Image
               src={bg}
               alt=''
@@ -56,6 +51,7 @@ export const Landing = () => {
           <Features />
         </div>
         <Roadmap />
+        <Tokenomics />
         <Footer />
       </main>
     );
