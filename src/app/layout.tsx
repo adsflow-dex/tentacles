@@ -58,7 +58,7 @@ export default function RootLayout({
           />
           <meta
             name='twitter:image'
-            content='https://adsflow.s3.amazonaws.com/af_og.png'
+            content='./seo-preview.png'
           />
 
           {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
