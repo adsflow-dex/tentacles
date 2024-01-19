@@ -3,14 +3,19 @@ import { Open_Sans, Raleway } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
 import Script from 'next/script';
-import { Footer } from '@/components';
+import og from './seo-preview.png';
+import Head from 'next/head';
 
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
     title: 'AdsFlow',
-    description: 'Your new favourite Advertisement solution',
+    description: 'Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.',
+    openGraph:{
+      images:['./seo-preview.png']
+    }
+
 };
 
 export default function RootLayout({
@@ -20,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
       <html lang='en' suppressHydrationWarning={true}>
-        <head>
+        <Head>
           {/* <!-- HTML Meta Tags --> */}
           <title>Transparent Advertising on the Blockchain.</title>
           <meta
@@ -39,10 +44,7 @@ export default function RootLayout({
             property='og:description'
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
-          <meta
-            property='og:image'
-            content='./seo-preview.png'
-          />
+          <meta property='og:image' content={og.src} />
 
           {/* <!-- Twitter Meta Tags --> */}
           <meta name='twitter:card' content='summary_large_image' />
@@ -56,10 +58,7 @@ export default function RootLayout({
             name='twitter:description'
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
-          <meta
-            name='twitter:image'
-            content='./seo-preview.png'
-          />
+          <meta name='twitter:image' content={og.src} />
 
           {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
           <Script
@@ -67,7 +66,7 @@ export default function RootLayout({
             strategy='beforeInteractive'
             id='hs-script-loader'
             src='https://js.hsforms.net/forms/embed/v2.js'></Script>
-        </head>
+        </Head>
         <body
           className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}>
           <ThemeProvider
