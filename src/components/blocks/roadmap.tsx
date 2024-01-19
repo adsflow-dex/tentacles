@@ -4,7 +4,7 @@ import background from '@/assets/illustrations/planet.png';
 
 export const Roadmap = () => {
     return (
-        <section className="h-fit w-full relative flex flex-col ">
+        <section id='roadmap' className="h-fit w-full relative flex flex-col ">
             <div className="absolute h-full w-full top-0 left-0 z-0">
                 <Image
                     src={background}

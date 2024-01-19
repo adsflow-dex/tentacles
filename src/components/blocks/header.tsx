@@ -22,12 +22,12 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href={'#features'}
+              href={'/#features'}
               className=' hover:text-foreground ease-in-out duration-300'>
               Features
             </Link>
             <Link
-              href={'#roadmap'}
+              href={'/#roadmap'}
               className=' hover:text-foreground ease-in-out duration-300'>
               Roadmap
             </Link>

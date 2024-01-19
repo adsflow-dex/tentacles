@@ -19,11 +19,11 @@ export const Hero = () => {
             <div className="flex items-center justify-center w-full max-w-screen-xl mx-auto px-5 lg:px-10 xl:px-[60px] py-4 ">
                 <div className="max-w-5xl pt-52 pb-40 mx-auto relative">
                     <div className="absolute left-0 -z-0 top-32 brightness-75">
-                        <Image
+                        {/* <Image
                             src={launch}
                             alt="rocket"
                             className="h-48 w-48 object-cover"
-                        />
+                        /> */}
                     </div>
                     <div className="">
                         <h1 className="text-[7vw] md:text-6xl xl:text-7xl text-center text-balance font-semibold text-foreground z-10 isolate overflow-hidden">
