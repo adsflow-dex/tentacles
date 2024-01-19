@@ -1,21 +1,22 @@
 import { create } from 'zustand';
 import { Connection, PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
 
-interface UserSOLBalanceStore {
+interface UserBalanceStore {
   balance: number;
-  getUserSOLBalance: (
+  getUserBalance: (
     publicKey: PublicKey,
     connection: Connection
   ) => Promise<void>;
 }
 
-const useUserBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
+const useUserBalanceStore = create<UserBalanceStore>((set, _get) => ({
   balance: 0,
-  getUserSOLBalance: async (publicKey, connection) => {
+  getUserBalance: async (publicKey, connection) => {
     let balance = 0;
     try {
       balance = await connection.getBalance(publicKey, 'confirmed');
       balance = balance / LAMPORTS_PER_SOL;
+      console.log(balance)
     } catch (e) {
       console.log(`Error getting balance: `, e);
     }

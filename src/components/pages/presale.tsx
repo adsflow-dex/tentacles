@@ -1,11 +1,10 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import background from '@/assets/illustrations/presale.png';
 import {
   Button,
   Popover,
-  PopoverClose,
   PopoverContent,
   PopoverTrigger,
   Swap,
@@ -18,11 +17,23 @@ import {
   CheckIcon,
   CheckboxIcon,
 } from '@radix-ui/react-icons';
+import useUserBalanceStore from '@/store/balance-store';
+import { LAMPORTS_PER_SOL } from '@solana/web3.js';
 
 export const Presale = () => {
   const { select, wallets, publicKey, disconnect, connected } = useWallet();
+  const { connection } = useConnection();
   const [openWallet, setOpenWallet] = useState<boolean>(false);
   const [openDisconnect, setOpenDisconnect] = useState<boolean>(false);
+  const balance = useUserBalanceStore((s) => s.balance);
+  const { getUserBalance } = useUserBalanceStore();
+  console.log(balance);
+  useEffect(() => {
+    if (publicKey) {
+      getUserBalance(publicKey, connection);
+    }
+  }, [publicKey, connection, getUserBalance]);
+
   return (
     <section className='h-screen w-full relative flex flex-col'>
       <div className='absolute h-full w-full top-0 left-0 z-0'>
@@ -106,7 +117,9 @@ export const Presale = () => {
             onOpenChange={() => setOpenDisconnect((prev) => !prev)}>
             <PopoverTrigger>
               <Button className='h-14 px-2 rounded-xl flex-col w-56 items-start'>
-                <p className='text-start px-2 text-xs text-muted-foreground'>Connected Wallet</p>
+                <p className='text-start px-2 text-xs text-muted-foreground'>
+                  Connected Wallet
+                </p>
                 <p className='w-full px-2 truncate text-sm'>
                   {publicKey.toBase58()}
                 </p>{' '}
