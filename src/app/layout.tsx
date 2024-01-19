@@ -26,14 +26,11 @@ export default function RootLayout({
     return (
       <html lang='en' suppressHydrationWarning={true}>
         <Head>
-          {/* <!-- HTML Meta Tags --> */}
           <title>Transparent Advertising on the Blockchain.</title>
           <meta
             name='description'
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
-
-          {/* <!-- Facebook Meta Tags --> */}
           <meta property='og:url' content='https://adsflow.net/' />
           <meta property='og:type' content='website' />
           <meta
@@ -45,8 +42,6 @@ export default function RootLayout({
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
           <meta property='og:image' content={og.src} />
-
-          {/* <!-- Twitter Meta Tags --> */}
           <meta name='twitter:card' content='summary_large_image' />
           <meta property='twitter:domain' content='adsflow.net' />
           <meta property='twitter:url' content='https://adsflow.net/' />
@@ -59,14 +54,12 @@ export default function RootLayout({
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
           <meta name='twitter:image' content={og.src} />
-
-          {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
-          <Script
-            type='text/javascript'
-            strategy='beforeInteractive'
-            id='hs-script-loader'
-            src='https://js.hsforms.net/forms/embed/v2.js'></Script>
         </Head>
+        <Script
+          type='text/javascript'
+          strategy='beforeInteractive'
+          id='hs-script-loader'
+          src='https://js.hsforms.net/forms/embed/v2.js'></Script>
         <body
           className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}>
           <ThemeProvider
