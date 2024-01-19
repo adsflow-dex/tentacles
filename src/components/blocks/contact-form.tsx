@@ -11,7 +11,7 @@ const FormButton = () => {
     return (
         <>
             <button
-                className="col-span-1 w-full justify-center  flex items-center tracking-wider bg-muted/50 py-4 rounded-full uppercase text-white border border-white transition duration-500 ease-in-out transform hover:bg-white hover:text-black hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline"
+                className="col-span-2 md:col-span-1 w-full justify-center  flex items-center tracking-wider bg-gradient py-4 rounded-xl uppercase text-white transition duration-500 ease-in-out transform hover:-translate-y-1 px-8 text-md md:mt-0 focus:shadow-outline"
                 type="submit"
             >
                 {pending ? '..Loading' : 'Submit'}
@@ -38,38 +38,38 @@ export function ContactForm() {
         {
             name: 'email',
             type: 'email',
-            placeholder: 'Enter your email',
+            placeholder: 'Email',
             required: true,
         },
 
         {
             name: 'firstName',
             type: 'text',
-            placeholder: 'Enter your FirstName',
+            placeholder: 'Firstname',
             required: true,
         },
         {
             name: 'lastName',
             type: 'text',
-            placeholder: 'Enter your LastName',
+            placeholder: 'Lastname',
             required: true,
         },
         {
             name: 'company',
             type: 'text',
-            placeholder: 'Enter your Company',
+            placeholder: 'Company',
             required: false,
         },
         {
             name: 'project',
             type: 'text',
-            placeholder: 'Enter your project',
+            placeholder: 'Project',
             required: false,
         },
         {
             name: 'reason',
             type: 'text',
-            placeholder: 'Enter your reason for contact',
+            placeholder: 'Reason for contact',
             required: false,
         },
     ];
@@ -81,7 +81,7 @@ export function ContactForm() {
                     ref.current?.reset();
                     await formAction(formData);
                 }}
-                className="grid grid-cols-2 gap-8"
+                className="grid grid-cols-2 gap-4"
             >
                 {fields.map((i) => (
                     <input
@@ -91,9 +91,9 @@ export function ContactForm() {
                         name={i.name}
                         placeholder={i.placeholder}
                         className={cn(
-                            'appearance-none h-16 w-full bg-transparent  rounded-full px-4 border focus:outline-none focus:bg-transparent focus:border-purple-500',
+                            'appearance-none h-16 w-full bg-input/25 placeholder:text-white/50 rounded-xl px-4 border border-white/25 focus:outline-none focus:bg-transparent focus:border-white/50',
                             i.name === 'firstName' || i.name === 'lastName'
-                                ? 'col-span-1'
+                                ? 'md:col-span-1 col-span-2'
                                 : 'col-span-2'
                         )}
                     />

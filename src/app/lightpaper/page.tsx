@@ -1,17 +1,16 @@
+import Link from 'next/link';
 import React from 'react';
 
-const page = () => {
-    return (
-        <div className="my-32">
-            <h1 className="text-2xl text-center font-bold mb-7">LightPaper</h1>
-
-            <iframe
-                src="https://adsflow.s3.amazonaws.com/AdsFlow_Lightpaper_V1.pdf"
-                className="h-[80vh] max-w-screen-lg w-full mx-auto"
-                title="AdsFlow Lightpaper"
-            ></iframe>
-        </div>
-    );
+const LightPaper = () => {
+  return (
+    <div className='h-screen w-screen'>
+      <iframe
+        src='https://adsflow.s3.amazonaws.com/AdsFlow_Lightpaper_V1.pdf'
+        className='h-full max-w-screen-xl w-full mx-auto p-5'
+        title='AdsFlow Lightpaper'
+      />
+    </div>
+  );
 };
 
-export default page;
+export default LightPaper;
