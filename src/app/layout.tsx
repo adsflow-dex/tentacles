@@ -9,14 +9,14 @@ import Head from 'next/head';
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
 
-export const metadata: Metadata = {
-    title: 'AdsFlow',
-    description: 'Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.',
-    openGraph:{
-      images:['./seo-preview.png']
-    }
+// export const metadata: Metadata = {
+//     title: 'AdsFlow',
+//     description: 'Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.',
+//     openGraph:{
+//       images:['./seo-preview.png']
+//     }
 
-};
+// };
 
 export default function RootLayout({
     children,
@@ -25,8 +25,8 @@ export default function RootLayout({
 }) {
     return (
       <html lang='en' suppressHydrationWarning={true}>
-        <head>
-          <title>Transparent Advertising on the Blockchain.</title>
+        <Head>
+          <title>AdsFlow | Transparent Advertising on the Blockchain.</title>
           <meta
             name='description'
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
@@ -54,7 +54,7 @@ export default function RootLayout({
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
           <meta name='twitter:image' content={og.src} />
-        </head>
+        </Head>
         <Script
           type='text/javascript'
           strategy='beforeInteractive'
