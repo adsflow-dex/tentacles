@@ -51,7 +51,7 @@ export const Landing = () => {
           <Features />
         </div>
         <Roadmap />
-        <Tokenomics />
+        {/* <Tokenomics /> */}
         <Footer />
       </main>
     );

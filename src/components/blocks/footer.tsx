@@ -23,7 +23,7 @@ export const Footer = () => {
       <footer className='mx-auto max-w-screen-xl pt-20 p-5'>
         <Newsletter />
 
-        <div className='grid  grid-cols-1  md:grid-cols-3 gap-6 px-4 md:px-0'>
+        <div className='grid  grid-cols-1  md:grid-cols-3 gap-6 px-5'>
           <div>
             <Link href='/' className='flex gap-2 items-end text-2xl'>
               <Logo className='h-12 w-12 [&>path]:fill-white/90' />

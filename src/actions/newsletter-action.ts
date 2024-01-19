@@ -17,18 +17,6 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendMail = async (receiverMail: string) => {
-    // const doc = await fs.readFile(
-    //     path.resolve(
-    //         process.cwd(),
-    //         'src',
-    //         'templates',
-    //         'newsletter-template',
-    //         'index.hbs'
-    //     ),
-    //     'utf8'
-    // );
-
-    // const template = handleBars.compile(doc.toString()) as any;
     const fetchTemplate = await fetch(
         'https://adsflow.s3.amazonaws.com/templates/newsletter/index.html'
     );

@@ -41,7 +41,7 @@ export default function RootLayout({
           />
           <meta
             property='og:image'
-            content='https://adsflow.s3.amazonaws.com/af_og.png'
+            content='./seo-preview.png'
           />
 
           {/* <!-- Twitter Meta Tags --> */}
