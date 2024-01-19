@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
       <html lang='en' suppressHydrationWarning={true}>
-        <Head>
+        <head>
           <title>Transparent Advertising on the Blockchain.</title>
           <meta
             name='description'
@@ -54,7 +54,7 @@ export default function RootLayout({
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
           <meta name='twitter:image' content={og.src} />
-        </Head>
+        </head>
         <Script
           type='text/javascript'
           strategy='beforeInteractive'
