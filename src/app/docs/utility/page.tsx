@@ -1,10 +1,13 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import { useEffect } from 'react';
 
 const Page = () => {
   const router = useRouter();
-  return router.push('/docs/utility/advertisers-marketers');
+  useEffect(() => {
+    router.push('/docs/utility/advertisers-marketers');
+  });
+  return;
 };
 
 export default Page;
