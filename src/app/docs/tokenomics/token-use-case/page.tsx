@@ -5,7 +5,7 @@ const Page = () => {
     <div className='h-[85vh] w-full '>
       <div className='w-full grid place-items-center'>
         <div className='py-24 text-center'>
-          <h2 className='text-3xl'> We're Sorry ☹️ !!</h2>
+          <h2 className='text-3xl'> We&apos;re Sorry ☹️ !!</h2>
           <p className='text-lg pt-4 text-muted-foreground'>
             This Page is Under Construction
           </p>
