@@ -3,8 +3,6 @@
 import { prisma } from '@/db';
 import nodemailer from 'nodemailer';
 import handleBars from 'handlebars';
-import { promises as fs } from 'fs';
-import path from 'path';
 
 const transporter = nodemailer.createTransport({
     host: 'smtp-relay.brevo.com',
@@ -25,9 +23,9 @@ const sendMail = async (receiverMail: string) => {
     const template = handleBars.compile(doc.toString()) as any;
 
     await transporter.sendMail({
-        from: '"Adsflow" <adsflownet@gmail.com>', // sender address
+        from: '"Adsflow" <adsflownet@gmail.com>', 
         to: receiverMail,
-        subject: 'Thank you for subscribing', // Subject line
+        subject: 'Thank you for subscribing', 
         html: template(),
     });
 };

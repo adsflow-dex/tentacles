@@ -9,15 +9,6 @@ import Head from 'next/head';
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
 
-// export const metadata: Metadata = {
-//     title: 'AdsFlow',
-//     description: 'Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.',
-//     openGraph:{
-//       images:['./seo-preview.png']
-//     }
-
-// };
-
 export default function RootLayout({
     children,
 }: {
@@ -25,7 +16,7 @@ export default function RootLayout({
 }) {
     return (
       <html lang='en' suppressHydrationWarning={true}>
-        <Head>
+        <head>
           <title>AdsFlow | Transparent Advertising on the Blockchain.</title>
           <meta
             name='description'
@@ -54,12 +45,12 @@ export default function RootLayout({
             content='Prioritize creator earnings via fair revenue sharing, diverse ad formats, and secure blockchain payments.'
           />
           <meta name='twitter:image' content={og.src} />
-        </Head>
         <Script
           type='text/javascript'
           strategy='beforeInteractive'
           id='hs-script-loader'
           src='https://js.hsforms.net/forms/embed/v2.js'></Script>
+        </head>
         <body
           className={`${font.className} ${display.variable} selection:bg-[rgb(3_255_189)] selection:text-[#232323]`}>
           <ThemeProvider

@@ -26,6 +26,7 @@
     --ring: 263.4 70% 50.4%;
     scrollbar-width: thin;
     scrollbar-color: rgb(67, 65, 65); 
+    --radius: 8px;
   }
   ::-webkit-scrollbar {
     width: 3px;

@@ -1,9 +1,8 @@
+import { Introduction } from '@/components';
 import React from 'react'
 
 const Docs = () => {
-  return (
-    <div>Docs</div>
-  )
+  return <Introduction />;
 }
 
 export default Docs

@@ -26,22 +26,17 @@ export function Header() {
             Home
           </Link>
           <Link
-            href={'/#features'}
+            href={'/docs'}
             className=' hover:text-foreground ease-in-out duration-300'>
-            Features
+            Documentation
           </Link>
           <Link
-            href={'/#roadmap'}
-            className=' hover:text-foreground ease-in-out duration-300'>
-            Roadmap
-          </Link>
-          <Link
-            href={'contact'}
+            href={'/contact'}
             className=' hover:text-foreground ease-in-out duration-300'>
             Contact Us
           </Link>
           <Link
-            href={'lightpaper'}
+            href={'/lightpaper'}
             className=' hover:text-foreground ease-in-out duration-300'>
             Lightpaper
           </Link>
@@ -60,16 +55,13 @@ export function Header() {
                   <Link href={'/'}>Home</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className='h-12 focus:bg-white/25 rounded-[6px]'>
-                  <Link href={'/#features'}>Features</Link>
+                  <Link href={'/docs'}>Documentation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className='h-12 focus:bg-white/25 rounded-[6px]'>
-                  <Link href={'/#roadmap'}>Roadmap</Link>
+                  <Link href={'/lightpaper'}>Lightpaper</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className='h-12 focus:bg-white/25 rounded-[6px]'>
-                  <Link href={'lightpaper'}>Lightpaper</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className='h-12 focus:bg-white/25 rounded-[6px]'>
-                  <Link href={'contact'}>Contact Us</Link>
+                  <Link href={'/contact'}>Contact Us</Link>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuGroup className='px-2 pt-12 pb-6'>
