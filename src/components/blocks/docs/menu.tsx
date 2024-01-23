@@ -17,29 +17,33 @@ export const DocsMenu = () => {
               key={menu.title}
               className={cn(
                 'px-3 py-2 font-light',
-                !menu.subItems && 'hover:bg-muted/50',
-                !menu.subItems &&
-                  pathname === menu.link &&
-                  'text-white font-bold'
+                !menu.subItems && 'hover:bg-muted/50'
               )}>
               <Link
                 href={menu.link}
-                className='text-lg hover:text-white ease-in-out duration-300 '>
+                className={cn(
+                  'text-lg hover:text-white ease-in-out duration-300 ',
+                  !menu.subItems &&
+                    pathname === menu.link &&
+                    'text-white font-bold'
+                )}>
                 {menu.title}
               </Link>
               {menu.subItems && (
                 <ul className='flex flex-col py-2 pl-4 list-disc list-inside'>
                   {menu.subItems?.map((sub) => {
+                    console.log(pathname);
                     return (
                       <li
                         key={sub.title}
-                        className={cn(
-                          'hover:bg-muted/50 px-2 py-1.5',
-                          pathname === menu.link && 'text-white font-bold'
-                        )}>
+                        className={cn('hover:bg-muted/50 px-2 py-1.5')}>
                         <Link
                           href={sub.link}
-                          className='hover:text-white ease-in-out duration-300 font-light '>
+                          className={cn(
+                            'hover:text-white ease-in-out duration-300 font-light ',
+                              pathname === sub.link &&
+                              'text-white font-bold'
+                          )}>
                           {sub.title}
                         </Link>
                       </li>

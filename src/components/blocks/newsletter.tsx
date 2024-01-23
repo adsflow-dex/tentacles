@@ -55,7 +55,7 @@ export function Newsletter() {
         <form
           ref={ref}
           action={formAction}
-          className=' flex flex-wrap justify-end sm:justify-center gap-4 py-12'>
+          className=' flex flex-wrap justify-end sm:justify-center gap-4 pt-12 sm:py-12'>
           <input
             type='email'
             required

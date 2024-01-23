@@ -11,6 +11,9 @@ export const SolutionOverview = () => {
             <h2 className='text-4xl font-display font-semibold text-white'>
               {sol.title}
             </h2>
+            <p className='mt-2 text-lg text-pretty tracking-wide leading-relaxed'>
+              {sol.tagline}
+            </p>
             <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
               {sol.description}
             </p>

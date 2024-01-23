@@ -1,24 +1,24 @@
-import { technology } from '@/assets/data/docs/technology-innovation';
+import { roadmap } from '@/assets/data/docs';
 import { DocNav } from '@/components/blocks/docs/doc-nav';
-import React from 'react'
+import React from 'react';
 
-export const TechnologyInnovation = () => {
+export const RoadmapDetail = () => {
   return (
     <div>
-      {technology.map((tech, index) => {
+      {roadmap.map((roadmap, index) => {
         return (
           <div key={index} className='text-white/70'>
             <h2 className='text-4xl font-display font-semibold text-white'>
-              {tech.title}
+              {roadmap.title}
             </h2>
             <p className='mt-2 text-lg text-pretty tracking-wide leading-relaxed'>
-              {tech.tagline}
+              {roadmap.tagline}
             </p>
             <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
-              {tech.description}
+              {roadmap.description}
             </p>
             <ul className='flex flex-col mt-3 pl-4'>
-              {tech.body.map((desc, index) => {
+              {roadmap.body.map((desc, index) => {
                 return (
                   <li
                     key={index}
@@ -28,19 +28,11 @@ export const TechnologyInnovation = () => {
                         {desc.subtitle}
                       </h3>
                     )}
-                    <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
-                      {desc.subdesc}
-                    </p>
                     <ul className='flex flex-col list-disc pl-4 mt-4'>
                       {desc.list.map((item, index) => {
                         return (
                           <li key={index}>
-                            <div className=' py-1'>
-                              <span className='font-semibold pr-3'>
-                                {item.title}
-                              </span>
-                           {item.desc}
-                            </div>
+                            <div className=' py-1'>{item.desc}</div>
                           </li>
                         );
                       })}
@@ -49,16 +41,19 @@ export const TechnologyInnovation = () => {
                 );
               })}
             </ul>
-            <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
-              {tech.endnote}
-            </p>
           </div>
         );
       })}
       <DocNav
-        prev={{ title: 'Solution Overview', link: '/docs/solution-overview' }}
-        next={{ title: 'Real-World Scenarios', link: '/docs/real-world-scenarios' }}
+        prev={{
+          title: '( Tokenomics ) Ecosystem Sustainability',
+          link: '/docs/tokenomics/ecosystem-sustainability',
+        }}
+        next={{
+          title: 'Frequently Asked Questions',
+          link: '/docs/frequently-asked-questions',
+        }}
       />
     </div>
-  )
-}
+  );
+};

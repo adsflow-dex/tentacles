@@ -1,6 +1,7 @@
 export const solution = [
   {
     title: 'Solution Overview',
+    tagline:'AdsFlow redefines advertising',
     description: `AdsFlow isn't just another technology solution; it's a complete advertising paradigm shift. We revolutionize advertising strategies by leveraging cutting-edge technology, particularly the transformative power of blockchain, and prioritizing user needs at every step. Imagine a world where:`,
     body: [
       {

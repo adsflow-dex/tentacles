@@ -70,7 +70,7 @@ export const Footer = () => {
                     <h6 className="text-xl font-semibold text-white">
                         Company
                     </h6>
-                    <ul className="my-5 grid gap-3 ">
+                    <ul className="mt-5 grid gap-3 ">
                         {company.map((i) => (
                             <li
                                 key={i.link}

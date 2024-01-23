@@ -1,16 +1,19 @@
-import { realworld } from '@/assets/data/docs/real-world-scenarios';
+import { realworldscenarios } from '@/assets';
 import { DocNav } from '@/components/blocks/docs/doc-nav';
 import React from 'react';
 
 export const RealWorldScenario = () => {
   return (
     <div>
-      {realworld.map((tech, index) => {
+      {realworldscenarios.map((tech, index) => {
         return (
           <div key={index} className='text-white/70'>
             <h2 className='text-4xl font-display font-semibold text-white'>
               {tech.title}
             </h2>
+            <p className='mt-2 text-lg text-pretty tracking-wide leading-relaxed'>
+              {tech.tagline}
+            </p>
             <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
               {tech.description}
             </p>
