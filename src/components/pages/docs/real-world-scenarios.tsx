@@ -1,24 +1,24 @@
-import { realworldscenarios } from '@/assets';
+import { realworld } from '@/assets';
 import { DocNav } from '@/components/blocks/docs/doc-nav';
 import React from 'react';
 
 export const RealWorldScenario = () => {
   return (
     <div>
-      {realworldscenarios.map((tech, index) => {
+      {realworld.map((real, index) => {
         return (
           <div key={index} className='text-white/70'>
             <h2 className='text-4xl font-display font-semibold text-white'>
-              {tech.title}
+              {real.title}
             </h2>
             <p className='mt-2 text-lg text-pretty tracking-wide leading-relaxed'>
-              {tech.tagline}
+              {real.tagline}
             </p>
             <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
-              {tech.description}
+              {real.description}
             </p>
             <ul className='flex flex-col mt-3 pl-4'>
-              {tech.body.map((desc, index) => {
+              {real.body.map((desc, index) => {
                 return (
                   <li
                     key={index}
@@ -47,13 +47,16 @@ export const RealWorldScenario = () => {
               })}
             </ul>
             <p className='mt-6 text-pretty tracking-wide leading-relaxed font-light'>
-              {tech.endnote}
+              {real.endnote}
             </p>
           </div>
         );
       })}
       <DocNav
-        prev={{ title: 'Technology & Innovation', link: '/docs/technology-innovation' }}
+        prev={{
+          title: 'Technology & Innovation',
+          link: '/docs/technology-innovation',
+        }}
         next={{
           title: '( Utility ) Advertisers & Marketers',
           link: '/docs/utility/advertisers-marketers',

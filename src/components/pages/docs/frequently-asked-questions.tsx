@@ -1,4 +1,10 @@
 import { faq } from '@/assets';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components';
 import { DocNav } from '@/components/blocks/docs/doc-nav';
 import React from 'react';
 
@@ -41,36 +47,43 @@ export const FrequentlyAskedQuestions = () => {
                     key={index}
                     className='py-3 text-pretty tracking-wide leading-relaxed font-light'>
                     {desc.subtitle && (
-                      <h3 className='text-xl font-semibold font-display'>
+                      <h3 className='text-2xl font-semibold font-display text-white/90'>
                         {desc.subtitle}
                       </h3>
                     )}
+
                     <ul className='flex flex-col list-disc pl-4 mt-4'>
                       {desc.list?.map((item, index) => {
                         return (
                           <li key={index}>
-                            <div className='py-1'>
-                              <span className='font-semibold pr-3'>
-                                {item.title}
-                              </span>
-                              {item.desc}
-                            </div>
-                            {item.sublist && (
-                              <ul className='flex flex-col list-[circle] pl-6 mb-4'>
-                                {item.sublist.map((sub, index) => {
-                                  return (
-                                    <li key={index}>
-                                      <div className='py-1'>
-                                        <span className='font-semibold pr-3'>
-                                          {sub.title}
-                                        </span>
-                                        {sub.desc}
-                                      </div>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            )}
+                            <Accordion type='single' collapsible>
+                              <AccordionItem className='border-b-none' value={item.title!}>
+                                <AccordionTrigger>
+                                  <p className='font-semibold py-1 pr-3'>
+                                    {item.title}
+                                  </p>
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                  <p className='text-base'>{item.desc}</p>
+                                  {item.sublist && (
+                                    <ul className='flex flex-col list-[circle] pl-6 mt-2 mb-4 text-base'>
+                                      {item.sublist.map((sub, index) => {
+                                        return (
+                                          <li key={index}>
+                                            <div className='py-1'>
+                                              <span className='font-semibold pr-3'>
+                                                {sub.title}
+                                              </span>
+                                              {sub.desc}
+                                            </div>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  )}
+                                </AccordionContent>
+                              </AccordionItem>
+                            </Accordion>
                           </li>
                         );
                       })}

@@ -11,16 +11,16 @@ export const roadmap = [
         subtitle: 'Inception and Project Kickoff (Sept - Dec 2023)',
         list: [
           {
-            desc: `Define vision, mission, and objectives`,
+            desc: `Define vision, mission, and objectives ✅`,
           },
           {
-            desc: `Formulate initial team structure`,
+            desc: `Formulate initial team structure ✅`,
           },
           {
-            desc: `Complete system architecture design`,
+            desc: `Complete system architecture design ✅`,
           },
           {
-            desc: `Finalize token definition`,
+            desc: `Finalize token definition ✅`,
           },
         ],
       },
@@ -28,7 +28,7 @@ export const roadmap = [
         subtitle: 'Foundational Setup and Preliminary Actions (Jan - Apr 2024)',
         list: [
           {
-            desc: `Mint tokens`,
+            desc: `Mint tokens ✅`,
           },
           {
             desc: `Conduct private sale`,

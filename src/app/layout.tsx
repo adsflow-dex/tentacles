@@ -1,10 +1,8 @@
-import type { Metadata } from 'next';
 import { Open_Sans, Raleway } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/theme-provider';
 import Script from 'next/script';
 import og from './seo-preview.png';
-import Head from 'next/head';
 
 const font = Open_Sans({ subsets: ['latin'] });
 const display = Raleway({ subsets: ['latin'], variable: '--font-display' });
@@ -26,7 +24,7 @@ export default function RootLayout({
           <meta property='og:type' content='website' />
           <meta
             property='og:title'
-            content='Transparent Advertising on the Blockchain.'
+            content='AdsFlow | Transparent Advertising on the Blockchain.'
           />
           <meta
             property='og:description'
@@ -59,7 +57,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange>
             {children}
-            {/* <Footer /> */}
           </ThemeProvider>
         </body>
         <Script

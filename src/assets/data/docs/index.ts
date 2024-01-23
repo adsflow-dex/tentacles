@@ -4,7 +4,4 @@ export * from './real-world-scenarios';
 export * from './roadmap';
 export * from './solution';
 export * from './technology-innovation';
-
 export * from './frequently-asked-questions';
-import realworldscenarios from "./real-world-scenarios.json"
-export { realworldscenarios }
