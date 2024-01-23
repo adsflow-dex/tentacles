@@ -23,14 +23,14 @@ export const Tokenomics = () => {
         label: '% of Tokens',
         data: [15, 8, 10, 12, 20, 25, 3, 7],
         backgroundColor: [
-          'rgba(240, 230, 140, 1)',
-          'rgba(240, 128, 128, 1)',
-          'rgba(255, 182, 193, 1)',
-          'rgba(147, 112, 219, 1)',
-          'rgba(255, 255, 153, 1)',
-          'rgba(143, 188, 143, 1)',
-          'rgba(188, 143, 143, 1)',
-          'rgba(240, 248, 255, 1)',
+          'rgba(113, 97, 239, 1)',
+          'rgba(53, 98, 242, 1)',
+          'rgba(86, 207, 225, 1)',
+          'rgba(53, 172, 122, 1)',
+          'rgba(255, 188, 66, 1)',
+          'rgba(255, 200, 221, 1)',
+          'rgba(239, 122, 133, 1)',
+          'rgba(184, 146, 255, 1)',
         ],
         borderColor: [
           'rgba(0 0 0 0)',
@@ -66,6 +66,9 @@ export const Tokenomics = () => {
           <div className='basis-full md:basis-1/2 sm:px-5 md:px-0'>
             <h3 className='text-2xl font-semibold font-display'>
               Token Distribution and Allocation
+            </h3>
+            <h3 className='text-lg font-display'>
+              AFL Total Supply : 10,000,000,000
             </h3>
             <p className='text-lg font-light text-muted-foreground'>
               The AFL Token is allocated across various categories within the
