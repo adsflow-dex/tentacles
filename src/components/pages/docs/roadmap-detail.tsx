@@ -7,7 +7,7 @@ export const RoadmapDetail = () => {
     <div>
       {roadmap.map((roadmap, index) => {
         return (
-          <div key={index} className='text-white/70'>
+          <div key={index} className='text-white/90'>
             <h2 className='text-4xl font-display font-semibold text-white'>
               {roadmap.title}
             </h2>

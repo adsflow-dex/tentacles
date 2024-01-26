@@ -7,7 +7,7 @@ export const ProblemStatement = () => {
     <div>
       {problem.map((prob, index) => {
         return (
-          <div key={index} className='text-white/70'>
+          <div key={index} className='text-white/90'>
             <h2 className='text-4xl font-display font-semibold text-white'>
               {prob.title}
             </h2>

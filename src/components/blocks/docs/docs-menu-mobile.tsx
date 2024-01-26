@@ -15,7 +15,7 @@ export const DocsMenuMobile = () => {
       <SheetTrigger className='ml-2 mt-3'>Menu</SheetTrigger>
       <SheetContent
         side={'left'}
-        className='rounded-xl bg-black/10 backdrop-blur-sm overflow-y-scroll w-screen p-2 py-4'>
+        className='rounded-xl bg-black/10 text-white/90 backdrop-blur-sm overflow-y-scroll w-screen p-2 py-4'>
         <div className='flex items-end gap-4 pl-4'>
           <Link href={'/'}>
             <Logo className='h-12 w-12 text-muted-foreground hover:text-white transition-colors duration-300' />
@@ -34,7 +34,7 @@ export const DocsMenuMobile = () => {
                 )}>
                 <Link
                   href={menu.link}
-                  className='text-base hover:text-white ease-in-out duration-300 font-light px-3 py-2'>
+                  className='text-base hover:text-white hover:font-bold ease-in-out duration-300 font-light px-3 py-2'>
                   {menu.title}
                 </Link>
                 {menu.subItems && (
@@ -44,7 +44,7 @@ export const DocsMenuMobile = () => {
                         <li key={sub.title} onClick={() => setOpen(false)} className='hover:bg-muted/50 px-2 py-1.5'>
                           <Link
                             href={sub.link}
-                            className='hover:text-white ease-in-out duration-300 font-light text-sm '>
+                            className='hover:text-white hover:font-bold ease-in-out duration-300 font-light text-sm '>
                             {sub.title}
                           </Link>
                         </li>

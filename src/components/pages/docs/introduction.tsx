@@ -7,7 +7,7 @@ export const Introduction = () => {
     <div>
       {introduction.map((intro) => {
         return (
-          <div key={intro.title} className='text-white/80 max-w-4xl'>
+          <div key={intro.title} className='text-white/90 max-w-4xl'>
             <h2 className='text-4xl font-display font-semibold text-white'>
               {intro.title}
             </h2>
@@ -18,7 +18,7 @@ export const Introduction = () => {
                     key={index}
                     className='py-3 text-pretty tracking-wide leading-relaxed font-light'>
                     {desc.subtitle && <h3 className=''>{desc.subtitle}</h3>}
-                    <p className=''>{desc.desc}</p>
+                    <p className='text-white/90'>{desc.desc}</p>
                   </div>
                 );
               })}

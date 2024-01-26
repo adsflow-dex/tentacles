@@ -30,7 +30,7 @@ export const FrequentlyAskedQuestions = () => {
     <div>
       {faq.map((faqs: IFAQ, index: number) => {
         return (
-          <div key={index} className='text-white/70'>
+          <div key={index} className='text-white/90'>
             <h2 className='text-4xl font-display font-semibold text-white'>
               {faqs.title}
             </h2>
@@ -47,7 +47,7 @@ export const FrequentlyAskedQuestions = () => {
                     key={index}
                     className='py-3 text-pretty tracking-wide leading-relaxed font-light'>
                     {desc.subtitle && (
-                      <h3 className='text-2xl font-semibold font-display text-white/90'>
+                      <h3 className='text-2xl font-semibold font-display text-white'>
                         {desc.subtitle}
                       </h3>
                     )}

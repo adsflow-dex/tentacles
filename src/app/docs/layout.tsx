@@ -9,7 +9,7 @@ import React from 'react';
 
 const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='h-screen w-screen scroll-smooth'>
+    <div className='h-screen w-screen scroll-smooth overflow-x-hidden'>
       <Header />
       <div className='h-[5.5rem] flex lg:hidden items-center fixed left-20 z-50 text-muted-foreground hover:text-white '>
         <DocsMenuMobile/>
