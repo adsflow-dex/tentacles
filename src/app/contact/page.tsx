@@ -24,9 +24,9 @@ function Contact() {
             It&apos;s a treasure trove of information that might just have what
             you&apos;re looking for. If you still need assistance, our support
             team is just an email away at{' '}
-            <a href='mailto:adsflownet@gmail'>
+            <a href='mailto:contact@adsflow.net'>
               <span className=' underline hover:text-primary underline-offset-2 cursor-pointer'>
-                adsflownet@gmail.com
+                contact@adsflow.net
               </span>
             </a>
           </p>
